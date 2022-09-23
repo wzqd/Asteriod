@@ -7,8 +7,8 @@ public class SpaceShip : MonoBehaviour
     private Rigidbody2D rb;
     
     [Header("Movement")]
-    [SerializeField] private int thrustSpeed;
-    [SerializeField] private int rotateSpeed;
+    [SerializeField] private float thrustSpeed;
+    [SerializeField] private float rotateSpeed;
     [SerializeField] private Vector3 direction;
     
 
@@ -24,23 +24,29 @@ public class SpaceShip : MonoBehaviour
     
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J)) //turn left
-        {
-            
-        }
-        else if (Input.GetKeyDown(KeyCode.L)) //turn right
-        {
-            
-        }
-
-        if (Input.GetKeyDown(KeyCode.K)) //thrust
-        {
-            
-        }
-        
+        Rotation();
     }
+
+    private void Rotation()
+    {
+        direction = (transform.rotation * Vector3.up).normalized; //get direction vector from quaternion
+
+        if (Input.GetKey(KeyCode.J)) //turn left
+        {
+            rb.AddTorque(rotateSpeed);
+        }
+        else if (Input.GetKey(KeyCode.L)) //turn right
+        {
+            rb.AddTorque(-rotateSpeed);
+        }
+        if (Input.GetKey(KeyCode.K)) //thrust
+        {
+            rb.AddForce(direction * thrustSpeed);
+        }
+    }
+    
 }
