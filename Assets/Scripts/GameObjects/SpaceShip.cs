@@ -20,7 +20,7 @@ public class SpaceShip : MonoBehaviour
     [SerializeField] private int health;
     [SerializeField] private int invincibleTime;
     
-    
+    public Asteroid ast;
     
     void Start()
     {
@@ -30,7 +30,11 @@ public class SpaceShip : MonoBehaviour
     {
         Move();
         OutOfScreenDetection();
+
+        
     }
+
+
 
     private void Move()
     {

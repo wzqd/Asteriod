@@ -1,14 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Asteroid : MonoBehaviour
 {
     [Header("Spawn")]
-    [SerializeField] private int speed;
-    [SerializeField] private float angle;
-    
+    [SerializeField] private float maxSpeed;
 
+    public SpaceShip ship;
 
     [SerializeField] private Rigidbody2D rb;
 
@@ -16,6 +17,7 @@ public class Asteroid : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        ship = GameObject.FindObjectOfType<SpaceShip>();
         
         Spawn();
 
@@ -24,13 +26,16 @@ public class Asteroid : MonoBehaviour
     
     void Update()
     {
-        
-    }
 
+    }
+    
+    
     private void Spawn()
     {
         float scale = Random.Range(0.2f, 1);
         transform.localScale = new Vector2(scale, scale); //Spawn with random size
+        
+        transform.rotation = Quaternion.Euler(0,0,Random.Range(0, 360)); //Spawn with random size
         
         int edge = Random.Range(0, 4);
         switch (edge) //Spawn at random edge
@@ -51,7 +56,10 @@ public class Asteroid : MonoBehaviour
                 transform.position = new Vector2(Random.Range(ScreenBound.Instance.LeftEdge, ScreenBound.Instance.RightEdge),
                     ScreenBound.Instance.BotEdge);
                 break;
-            
         }
+        Vector3 direction = new Vector3(0,0,0) - this.transform.position;
+        Vector3 randomDirection = Quaternion.Euler(new Vector3(0, 0, Random.Range(-30f, 30f))) * direction; //Random direction (within certain angles around center)
+        rb.velocity = randomDirection * Random.Range(0.2f, maxSpeed);  //Random speed
+        
     }
 }
