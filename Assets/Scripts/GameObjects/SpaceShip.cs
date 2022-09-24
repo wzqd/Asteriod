@@ -20,15 +20,16 @@ public class SpaceShip : MonoBehaviour
     [SerializeField] private int health;
     [SerializeField] private int invincibleTime;
     
-    public Asteroid ast;
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
     }
     void Update()
     {
         Move();
+        Shoot();
         OutOfScreenDetection();
 
         
@@ -52,6 +53,19 @@ public class SpaceShip : MonoBehaviour
         if (Input.GetKey(KeyCode.K)) //thrust
         {
             rb.AddForce(direction * thrustSpeed);
+        }
+    }
+
+    private void Shoot()
+    {
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            var bulletObj = PoolMgr.Instance.GetObj("GameObjects/Bullet");
+            bulletObj.transform.position = this.transform.position + direction;
+            bulletObj.transform.rotation = this.transform.rotation;
+            Bullet bullet = bulletObj.GetComponent<Bullet>();
+            bullet.rb.velocity = direction * this.bulletSpeed;
         }
     }
 

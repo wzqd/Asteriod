@@ -20,7 +20,13 @@ public class ScreenBound : Singleton<ScreenBound>
         RightEdge = cornerPos.x;
         UpEdge = cornerPos.y;
         BotEdge = -cornerPos.y;
+    }
 
+    public bool IsOutOfBound(Vector2 position)
+    {
+        if (position.x > RightEdge || position.x < LeftEdge) return true;
+        if (position.y > UpEdge || position.y < BotEdge) return true;
+        return false;
     }
     
 }
