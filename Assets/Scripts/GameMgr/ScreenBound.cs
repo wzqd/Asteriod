@@ -1,40 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public class ScreenBound : Singleton<ScreenBound>
 {
-    private float leftEdge;
-    private float rightEdge;
-    private float upEdge;
-    private float botEdge;
+
+    public float LeftEdge { get; }
+    public float RightEdge{ get; }
+    public float UpEdge{ get; }
+    public float BotEdge{ get; }
     
-    void Awake()
+
+
+    public ScreenBound()
     {
         Vector2 cornerPos = Camera.main.ViewportToWorldPoint(new Vector2(1,1));
-        leftEdge = -cornerPos.x;
-        rightEdge = cornerPos.x;
-        upEdge = cornerPos.y;
-        botEdge = -cornerPos.y;
-    }
+        LeftEdge = -cornerPos.x;
+        RightEdge = cornerPos.x;
+        UpEdge = cornerPos.y;
+        BotEdge = -cornerPos.y;
 
-    public float getLeftEdge()
-    {
-        return leftEdge;
-    }    
-    
-    public float getRightEdge()
-    {
-        return rightEdge;
-    }    
-    
-    public float getUpEdge()
-    {
-        return upEdge;
-    }    
-    
-    public float getBotEdge()
-    {
-        return botEdge;
     }
+    
 }
