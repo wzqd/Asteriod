@@ -61,11 +61,11 @@ public class SpaceShip : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            var bulletObj = PoolMgr.Instance.GetObj("GameObjects/Bullet");
-            bulletObj.transform.position = this.transform.position + direction;
-            bulletObj.transform.rotation = this.transform.rotation;
+            var bulletObj = PoolMgr.Instance.GetObj("GameObjects/Bullet"); //get object from pool
+            bulletObj.transform.position = this.transform.position + direction; //adjust its position to the head of the ship
+            bulletObj.transform.rotation = this.transform.rotation; //adjust its rotation
             Bullet bullet = bulletObj.GetComponent<Bullet>();
-            bullet.rb.velocity = direction * this.bulletSpeed;
+            bullet.rb.velocity = direction * this.bulletSpeed; //adjust its speed
         }
     }
 
