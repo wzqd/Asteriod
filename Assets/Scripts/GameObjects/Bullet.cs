@@ -29,4 +29,5 @@ public class Bullet : MonoBehaviour
             PoolMgr.Instance.PushObj("GameObjects/Bullet", this.gameObject); //push it into the pool
         }
     }
+    
 }

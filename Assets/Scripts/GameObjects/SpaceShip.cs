@@ -14,10 +14,8 @@ public class SpaceShip : MonoBehaviour
 
     [Header("Shooting")] 
     [SerializeField] private int bulletSpeed;
-    [SerializeField] private int shootInterval;
 
-    [Header("Other")] 
-    [SerializeField] private int health;
+    [Header("Other")]
     [SerializeField] private int invincibleTime;
     
     

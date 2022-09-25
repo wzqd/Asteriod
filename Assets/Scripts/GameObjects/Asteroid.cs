@@ -73,4 +73,13 @@ public class Asteroid : MonoBehaviour
         rb.velocity = randomDirection * Random.Range(0.2f, maxSpeed);  //Random speed
         
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("SpaceShip")) //if it hits space ship
+        {
+            EventMgr.Instance.EventTrigger("AsteroidHitSpaceShip");
+            PoolMgr.Instance.PushObj("GameObjects/Asteroid", this.gameObject); //push it back to the pool
+        }
+    }
 }
