@@ -14,23 +14,34 @@ public class Asteroid : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         ship = GameObject.FindObjectOfType<SpaceShip>();
         
-        Spawn();
-
         
     }
-    
+
+    private void OnEnable()
+    {
+        RandomSpawn(); //spawn when out of the pool
+    }
+
     void Update()
     {
+        OutOfScreenDetection();
+    }
 
+    private void OutOfScreenDetection()
+    {
+        if (ScreenBound.Instance.IsOutOfBound(this.transform.position)) //if it is out of bound
+        {
+            PoolMgr.Instance.PushObj("GameObjects/Asteroid", this.gameObject); //push it back to the pool
+        }
     }
     
     
-    private void Spawn()
+    private void RandomSpawn()
     {
         float scale = Random.Range(0.2f, 1);
         transform.localScale = new Vector2(scale, scale); //Spawn with random size

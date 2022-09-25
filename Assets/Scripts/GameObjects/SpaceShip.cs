@@ -23,6 +23,7 @@ public class SpaceShip : MonoBehaviour
     
     void Start()
     {
+
         rb = GetComponent<Rigidbody2D>();
 
     }
