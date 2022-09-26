@@ -23,6 +23,8 @@ public class SpaceShip : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody2D>();
+        
+        EventMgr.Instance.AddEventListener("RestartGame", ResetShipPosition);
 
     }
     void Update()
@@ -89,5 +91,12 @@ public class SpaceShip : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x, ScreenBound.Instance.UpEdge);
         }
+    }
+
+    private void ResetShipPosition()
+    {
+        this.transform.position = new Vector3(0, 0, 0);
+        this.transform.eulerAngles = new Vector3(0, 0, 0);
+        rb.Sleep(); //to instantly stop objects with add force
     }
 }

@@ -14,16 +14,29 @@ public class ScoreBoard : BasePanel
     {
         scoreText =  GetUIComponent<Text>("Score");
         EventMgr.Instance.AddEventListener("AsteroidDestroyed", AsteroidDestroyed);
+        EventMgr.Instance.AddEventListener("RestartGame", ResetScore);
     }
 
     private void Update()
     {
         // score += 1;//survival points
-        scoreText.text = score.ToString(); 
     }
 
     private void AsteroidDestroyed()
     {
         score += 100; //hit asteroid points
+        scoreText.text = score.ToString(); //update score on ui
+    }
+
+    private void ResetScore()
+    {
+        score = 0;
+        scoreText.text = score.ToString(); //update score on ui
+    }
+
+    public override void Show() //adjust size of the panel
+    {
+        (transform as RectTransform).sizeDelta = new Vector2(250, 100);
+        (transform as RectTransform).anchoredPosition = new Vector2(190, -90);
     }
 }

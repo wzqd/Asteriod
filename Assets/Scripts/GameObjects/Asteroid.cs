@@ -19,6 +19,8 @@ public class Asteroid : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         ship = GameObject.FindObjectOfType<SpaceShip>();
         
+        EventMgr.Instance.AddEventListener("RestartGame", HideAsteroid);
+        
         
     }
 
@@ -39,6 +41,12 @@ public class Asteroid : MonoBehaviour
             PoolMgr.Instance.PushObj("GameObjects/Asteroid", this.gameObject); //push it back to the pool
         }
     }
+
+    private void HideAsteroid()
+    {
+        PoolMgr.Instance.PushObj("GameObjects/Asteroid", this.gameObject); //push it back to the pool
+    }
+    
     
     
     private void RandomSpawn()

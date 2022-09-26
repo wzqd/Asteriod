@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -54,6 +55,7 @@ public class UIMgr : Singleton<UIMgr>
         bot = canvas.Find("Bot");
         mid = canvas.Find("Mid");
         top = canvas.Find("Top");
+        
 
         obj = ResMgr.Instance.Load<GameObject>("UI/EventSystem"); //动态载入EventSystem
         GameObject.DontDestroyOnLoad(obj); //使其过场景不移除
@@ -103,7 +105,7 @@ public class UIMgr : Singleton<UIMgr>
         {
             //加载完成后函数
             
-            Transform currPanel = bot; //默认为底层
+            var currPanel = bot; //默认为底层
             switch (panelLayer)
             {
                 case E_PanelLayer.Mid: 
