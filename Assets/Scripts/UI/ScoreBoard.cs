@@ -8,11 +8,11 @@ using UnityEngine.UI;
 public class ScoreBoard : BasePanel
 {
     private float score;
-    private TextMeshProUGUI scoreText;
+    private Text scoreText;
     
     private void Start()
     {
-        scoreText =  GetUIComponent<TextMeshProUGUI>("Score");
+        scoreText =  GetUIComponent<Text>("Score");
         EventMgr.Instance.AddEventListener("AsteroidDestroyed", AsteroidDestroyed);
     }
 

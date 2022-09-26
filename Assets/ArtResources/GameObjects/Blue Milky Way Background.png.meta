@@ -1,0 +1,1103 @@
+fileFormatVersion: 2
+guid: 2490a59d12ecee145a5ae680ca557947
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 75
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blue Milky Way Background_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2525
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee1b28979bb715419c65bcd52939a03
+      internalID: -1786914454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_1
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 2525
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977f717b72dca1040a51e24ccb33cd8d
+      internalID: 779972942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_2
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 2525
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46a78912961ef147b8d8d2b4a6a10a1
+      internalID: -374782103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_3
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 2525
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75290d53ccdfd74c8a14b186ff3afae
+      internalID: -2063677382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_4
+      rect:
+        serializedVersion: 2
+        x: 2957
+        y: 2525
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47c512c3b9b3ae42a70e12a58c44488
+      internalID: -1740071377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_5
+      rect:
+        serializedVersion: 2
+        x: 3695
+        y: 2525
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e27f33392f09a042983708f165e0c61
+      internalID: -534343857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_6
+      rect:
+        serializedVersion: 2
+        x: 4433
+        y: 2525
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee80193f206fb4419c306f557ec33ac
+      internalID: -533881756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_7
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2105
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010fd2179f753c2448c730656b1b64d9
+      internalID: 194953707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_8
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 2105
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b77e60088649d43a860cfe79983150
+      internalID: 168066670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_9
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 2105
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5807c82e507f348a9870c46ad66951
+      internalID: -669903034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_10
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 2105
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f511ae1bcd450d14ab75c7db1a4e916f
+      internalID: -761262844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_11
+      rect:
+        serializedVersion: 2
+        x: 2957
+        y: 2105
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efbe3b4217f525f43b6bb2f6f8e78f12
+      internalID: 96197687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_12
+      rect:
+        serializedVersion: 2
+        x: 3695
+        y: 2105
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71113fbe6d22244c970454f8e5fb325
+      internalID: 357220041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_13
+      rect:
+        serializedVersion: 2
+        x: 4433
+        y: 2105
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6d4b97de025ba45aa6b71066551277
+      internalID: 611270578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_14
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1685
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82c2907b75ad9b4887d81ec075841d5
+      internalID: -555605814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_15
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 1685
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b0329b3f8f619146a9f7a8f7f504d20
+      internalID: -1954444250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_16
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 1685
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a119eff4642ed42aea189c964595ef
+      internalID: -1157211919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_17
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 1685
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2128b0075e3b40419e06e43fe42b63e
+      internalID: -697749373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_18
+      rect:
+        serializedVersion: 2
+        x: 2957
+        y: 1685
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f194648589457a459589908858f8547
+      internalID: -1443132096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_19
+      rect:
+        serializedVersion: 2
+        x: 3695
+        y: 1685
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258a671775174dd40bb63eb2b15316e8
+      internalID: 1542935502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_20
+      rect:
+        serializedVersion: 2
+        x: 4433
+        y: 1685
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf091d91844cac44a81e3b1456a36964
+      internalID: -128098328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_21
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1265
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8bfa6ab1ec3b345a0380f085a3864b
+      internalID: 138280350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_22
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 1265
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9db35e31886eb748b6f41e6415e9172
+      internalID: -1261746702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_23
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 1265
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ff319b4564f774aba136e8e7c504a1
+      internalID: -221350959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_24
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 1265
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90aa5b7734005a74eb533619dcdecb55
+      internalID: -1385266355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_25
+      rect:
+        serializedVersion: 2
+        x: 2957
+        y: 1265
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee250172ac423cc45ba72ef1a82795a1
+      internalID: 302728655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_26
+      rect:
+        serializedVersion: 2
+        x: 3695
+        y: 1265
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b106c17768fee74e9e09103f6e1f13e
+      internalID: 1028531925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_27
+      rect:
+        serializedVersion: 2
+        x: 4433
+        y: 1265
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e62e3b8171d7d459e575bfea6418d4
+      internalID: 839097090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_28
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 845
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae84bb5a37839c45b1cc233dfe88ac3
+      internalID: -1017676019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_29
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 845
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff34802b7d92a6e4ab84e1f047875862
+      internalID: -738641310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_30
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 845
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c030f25d5920ec4eb6f5edc2089a9e3
+      internalID: 1792444382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_31
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 845
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830e68db3bcc31d4bb44473db580d175
+      internalID: 1973317919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_32
+      rect:
+        serializedVersion: 2
+        x: 2957
+        y: 845
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad660df5944b844b8665ee2520843e7
+      internalID: -272528733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_33
+      rect:
+        serializedVersion: 2
+        x: 3695
+        y: 845
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c5e80393806804aab9e1fe0a51010c
+      internalID: 1722768538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_34
+      rect:
+        serializedVersion: 2
+        x: 4433
+        y: 845
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b04318e98fc864ea6e037cd21d4b23
+      internalID: 644069788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_35
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 425
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936e2f7270101bc46aafc03023b0fa89
+      internalID: 1994620318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_36
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 425
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351d1efc0dbf4e343b1f70032581e943
+      internalID: 951779386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_37
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 425
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d4db8c770313949ab9a35d0596956b
+      internalID: 1510298769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_38
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 425
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3251631e52962084aaef11ba7f322f4e
+      internalID: 811684071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_39
+      rect:
+        serializedVersion: 2
+        x: 2957
+        y: 425
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa0c0df17b05e14d875b4696e9ea005
+      internalID: 1785090983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_40
+      rect:
+        serializedVersion: 2
+        x: 3695
+        y: 425
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51890327b63b6414c8a959dda6399979
+      internalID: -1744782516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_41
+      rect:
+        serializedVersion: 2
+        x: 4433
+        y: 425
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048931c73002bd04c9e3e57bbdab4374
+      internalID: 535563364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_42
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5c63f71ae8b4243a89ea31fb666791
+      internalID: 1416853361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Milky Way Background_43
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 5
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9a8cf802e8ad343a452983af0525fb
+      internalID: -549590464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Blue Milky Way Background_2: -374782103
+      Blue Milky Way Background_17: -697749373
+      Blue Milky Way Background_7: 194953707
+      Blue Milky Way Background_33: 1722768538
+      Blue Milky Way Background_23: -221350959
+      Blue Milky Way Background_32: -272528733
+      Blue Milky Way Background_0: -1786914454
+      Blue Milky Way Background_1: 779972942
+      Blue Milky Way Background_29: -738641310
+      Blue Milky Way Background_34: 644069788
+      Blue Milky Way Background_36: 951779386
+      Blue Milky Way Background_22: -1261746702
+      Blue Milky Way Background_20: -128098328
+      Blue Milky Way Background_26: 1028531925
+      Blue Milky Way Background_35: 1994620318
+      Blue Milky Way Background_42: 1416853361
+      Blue Milky Way Background_8: 168066670
+      Blue Milky Way Background_4: -1740071377
+      Blue Milky Way Background_25: 302728655
+      Blue Milky Way Background_14: -555605814
+      Blue Milky Way Background_31: 1973317919
+      Blue Milky Way Background_3: -2063677382
+      Blue Milky Way Background_38: 811684071
+      Blue Milky Way Background_39: 1785090983
+      Blue Milky Way Background_24: -1385266355
+      Blue Milky Way Background_18: -1443132096
+      Blue Milky Way Background_11: 96197687
+      Blue Milky Way Background_16: -1157211919
+      Blue Milky Way Background_9: -669903034
+      Blue Milky Way Background_37: 1510298769
+      Blue Milky Way Background_15: -1954444250
+      Blue Milky Way Background_40: -1744782516
+      Blue Milky Way Background_10: -761262844
+      Blue Milky Way Background_41: 535563364
+      Blue Milky Way Background_28: -1017676019
+      Blue Milky Way Background_13: 611270578
+      Blue Milky Way Background_5: -534343857
+      Blue Milky Way Background_27: 839097090
+      Blue Milky Way Background_12: 357220041
+      Blue Milky Way Background_43: -549590464
+      Blue Milky Way Background_30: 1792444382
+      Blue Milky Way Background_21: 138280350
+      Blue Milky Way Background_19: 1542935502
+      Blue Milky Way Background_6: -533881756
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
