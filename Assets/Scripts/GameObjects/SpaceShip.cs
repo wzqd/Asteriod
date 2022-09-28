@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,13 +30,15 @@ public class SpaceShip : MonoBehaviour
     }
     void Update()
     {
-        Move();
         Shoot();
         OutOfScreenDetection();
 
-        
     }
 
+    private void FixedUpdate() //physic related
+    {
+        Move();
+    }
 
 
     private void Move()
