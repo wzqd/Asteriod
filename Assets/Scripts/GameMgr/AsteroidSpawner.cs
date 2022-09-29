@@ -19,8 +19,10 @@ public class AsteroidSpawner : MonoBehaviour
     {
         while (true)
         {
-            PoolMgr.Instance.GetObj("GameObjects/Asteroid");
-
+            Asteroid ast = PoolMgr.Instance.GetObj("GameObjects/Asteroid").gameObject.GetComponent<Asteroid>();
+    
+            ast.RandomSpawn(); //spawn the asteroid
+            
             yield return new WaitForSeconds(spawnTime); //wait for few seconds to spawn next asteroid
         }
     }

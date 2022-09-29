@@ -11,16 +11,7 @@ public class Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Asteroid")) //if it hit a asteroid
-        {
-            EventMgr.Instance.EventTrigger("AsteroidDestroyed"); //trigger event
-            PoolMgr.Instance.PushObj("GameObjects/Bullet", this.gameObject); //push it into pool
-            PoolMgr.Instance.PushObj("GameObjects/Asteroid", other.gameObject); //push the hit asteroid into pool
-        }
-    }
+    
 
     void Update()
     {
