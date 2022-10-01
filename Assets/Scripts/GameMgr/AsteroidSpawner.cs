@@ -2,12 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidSpawner : MonoBehaviour
+public class AsteroidSpawner : SingletonMono<AsteroidSpawner>
 {
+
     private float spawnTime = 2;
     void Start()
     {
-        StartCoroutine("SpawnCoroutine");
+        EventMgr.Instance.AddEventListener("StartGame", (() =>
+        {
+            StartCoroutine("SpawnCoroutine");
+        }));
+        
+        EventMgr.Instance.AddEventListener("GameOver", (() =>
+        {
+            StopCoroutine("SpawnCoroutine");
+        }));
+        EventMgr.Instance.AddEventListener("RestartGame", () =>
+        {
+            StartCoroutine("SpawnCoroutine");
+        });
+        
+        
+
+
     }
     
     void Update()

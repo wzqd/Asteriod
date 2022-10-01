@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,11 +16,7 @@ public class EndGame : BasePanel
     {
         
     }
-
-    private void ShowEndGamePanel()
-    {
-        this.gameObject.SetActive(true);
-    }
+    
 
     public override void Show() //adjust size of the panel
     {
@@ -34,8 +31,20 @@ public class EndGame : BasePanel
         switch (buttonName)
         {
             case "RetryButton":
-                Time.timeScale = 1; //restore the time
                 EventMgr.Instance.EventTrigger("RestartGame");
+                Time.timeScale = 1; //restore the time
+                break;
+            
+            case "ReturnButton":
+                Time.timeScale = 1; //restore the time
+                SceneMgr.Instance.LoadScene("StartMenu",(() =>
+                {
+                    EventMgr.Instance.EventTrigger("ReturnToMenu");
+                    
+                    PoolMgr.Instance.Clear();
+                    UIMgr.Instance.HidePanel("EndGame");
+                    print("return to start menu");
+                }));
                 break;
         }
     }

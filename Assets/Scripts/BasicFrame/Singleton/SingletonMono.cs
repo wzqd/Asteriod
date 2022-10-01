@@ -23,4 +23,15 @@ public class SingletonMono<T> : MonoBehaviour where T : MonoBehaviour
             return instance;
         }
     }
+
+    public static T GetInstance()
+    {
+        if( instance == null )
+        {
+            GameObject obj = new GameObject {name = typeof(T) + "_Singleton"};
+            instance = obj.AddComponent<T>();
+            DontDestroyOnLoad(obj);
+        } 
+        return instance;
+    }
 }

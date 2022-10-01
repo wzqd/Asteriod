@@ -25,6 +25,7 @@ public class ScoreBoard : BasePanel
     private void AsteroidDestroyed()
     {
         score += 100; //hit asteroid points
+        if (scoreText == null) return;
         scoreText.text = score.ToString(); //update score on ui
     }
 

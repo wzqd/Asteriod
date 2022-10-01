@@ -21,5 +21,12 @@ public class Singleton<T> where T:new()
         return instance;
         }
     }
+
+    public static T GetInstance()
+    {
+        if (instance == null)
+            instance = new T();
+        return instance;
+    }
 }
 

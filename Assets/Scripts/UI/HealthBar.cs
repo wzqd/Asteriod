@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class HealthBar : BasePanel
 {
-    [SerializeField] private int health = 2;
-    private List<Image> healthImages = new List<Image>();
+    [SerializeField] private int health;
+    private List<Image> healthImages;
     void Start()
     {
+        healthImages = new List<Image>();
+        
         for (int i = 0; i <= health; i++)
         {
             healthImages.Add(GetUIComponent<Image>("Health" + i)); //get all children images 
@@ -16,7 +18,13 @@ public class HealthBar : BasePanel
         }
 
         EventMgr.Instance.AddEventListener("AsteroidHitSpaceShip", ReduceShipHealth);
-        EventMgr.Instance.AddEventListener("RestartGame", ResetShipHealth);
+        
+        
+        EventMgr.Instance.AddEventListener("RestartGame", ResetShipHealthUI);
+        EventMgr.Instance.AddEventListener("ReturnToMenu", ResetShipHealthUI);
+        EventMgr.Instance.AddEventListener("GameOver", ResetShipHealth);
+        EventMgr.Instance.AddEventListener("ReturnToMenu", ResetShipHealth);
+
     }
     
     void Update()
@@ -28,6 +36,7 @@ public class HealthBar : BasePanel
     {
         if (health >= 0) //if it still has health
         {
+            if (healthImages[health] == null) return;
             healthImages[health].gameObject.SetActive(false); //reduce health in ui
             health--; //reduce health
         }
@@ -37,13 +46,17 @@ public class HealthBar : BasePanel
         }
     }
 
+    private void ResetShipHealthUI() //reset the health ui of ship
+    {
+        for (int i = 0; i <= health; i++)
+        {
+            if (healthImages[health] == null) return;
+            healthImages[i].gameObject.SetActive(true); //reset images on ui
+        }
+    }   
     private void ResetShipHealth() //reset the health of ship
     {
         health = 2;
-        for (int i = 0; i <= health; i++)
-        {
-            healthImages[i].gameObject.SetActive(true); //reset images on ui
-        }
     }
     
     public override void Show() //adjust size of the panel

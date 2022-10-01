@@ -49,6 +49,7 @@ public class Asteroid : MonoBehaviour
     private void HideAsteroid()
     {
         canBeSplit = false; //clear the flag;
+        if(this == null) return;
         PoolMgr.Instance.PushObj("GameObjects/Asteroid", this.gameObject); //push it back to the pool
     }
     
@@ -115,7 +116,7 @@ public class Asteroid : MonoBehaviour
         if (other.gameObject.CompareTag("SpaceShip")) //if it hits space ship
         {
             EventMgr.Instance.EventTrigger("AsteroidHitSpaceShip");
-            PoolMgr.Instance.PushObj("GameObjects/Asteroid", this.gameObject); //push it back to the pool
+            HideAsteroid();
         }
         else if (other.gameObject.CompareTag("Bullet")) //if it hits a bullet
         {
