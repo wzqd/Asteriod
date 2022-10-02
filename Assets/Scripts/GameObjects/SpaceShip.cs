@@ -6,6 +6,8 @@ using UnityEngine;
 public class SpaceShip : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Renderer rd;
+    private Collider2D col;
     
     [Header("Movement")]
     [SerializeField] private float thrustSpeed;
@@ -18,14 +20,21 @@ public class SpaceShip : MonoBehaviour
 
     [Header("Other")]
     [SerializeField] private int invincibleTime;
+    [SerializeField] private float blinkInterval;
+    private Coroutine blinkCoroutine;
+    
     
     
     void Start()
     {
 
         rb = GetComponent<Rigidbody2D>();
+        rd = GetComponent <Renderer>();
+        col = GetComponent<Collider2D>();
         
         EventMgr.Instance.AddEventListener("RestartGame", ResetShipPosition);
+        EventMgr.Instance.AddEventListener("AsteroidHitSpaceShip", ShipInvincible);
+        
 
     }
     void Update()
@@ -75,6 +84,31 @@ public class SpaceShip : MonoBehaviour
         }
     }
 
+    private void ShipInvincible()
+    {
+        col.enabled = false; //turn off collider, and become invincible
+        TimeMgr.Instance.StartFuncTimer(invincibleTime, () =>
+            {
+                blinkCoroutine = StartCoroutine("ShipBlinkCoroutine"); //blink while being invincible
+            },
+            (() =>
+            {
+                StopCoroutine(blinkCoroutine);
+                rd.enabled = true; //always show renderer after blinking
+                col.enabled = true;
+            }));
+
+    }
+
+    private IEnumerator ShipBlinkCoroutine()
+    {
+        while (true)
+        {
+            rd.enabled = !rd.enabled; //blink
+            yield return new WaitForSeconds(blinkInterval);
+        }
+    }
+    
     private void OutOfScreenDetection()
     {
         if (transform.position.x > ScreenBound.Instance.RightEdge) //beyond right edge
