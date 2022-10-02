@@ -24,6 +24,7 @@ public class StartPanel : BasePanel
                     print("enter game scene");
                     PoolMgr.Instance.Clear();
                     EventMgr.Instance.EventTrigger("StartGame"); //trigger event, let UIControl do the things
+                    AudioMgr.Instance.ClearAudio();
 
                 }));
                 break;

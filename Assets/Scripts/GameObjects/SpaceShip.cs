@@ -18,7 +18,7 @@ public class SpaceShip : MonoBehaviour
     [Header("Shooting")] 
     [SerializeField] private int bulletSpeed;
 
-    [Header("Other")]
+    [Header("InvincibleTime")]
     [SerializeField] private int invincibleTime;
     [SerializeField] private float blinkInterval;
     private Coroutine blinkCoroutine;
@@ -81,11 +81,13 @@ public class SpaceShip : MonoBehaviour
             bullet.rb.velocity = direction * this.bulletSpeed; //adjust its speed
             
             //add audio
+            AudioMgr.Instance.PlayAudio("Laser", false);
         }
     }
 
     private void ShipInvincible()
     {
+        if (col == null) return;
         col.enabled = false; //turn off collider, and become invincible
         TimeMgr.Instance.StartFuncTimer(invincibleTime, () =>
             {
@@ -93,6 +95,7 @@ public class SpaceShip : MonoBehaviour
             },
             (() =>
             {
+                if (this == null) return;
                 StopCoroutine(blinkCoroutine);
                 rd.enabled = true; //always show renderer after blinking
                 col.enabled = true;
@@ -104,6 +107,7 @@ public class SpaceShip : MonoBehaviour
     {
         while (true)
         {
+            if (rd == null) yield break;
             rd.enabled = !rd.enabled; //blink
             yield return new WaitForSeconds(blinkInterval);
         }
@@ -134,6 +138,7 @@ public class SpaceShip : MonoBehaviour
 
     private void ResetShipPosition()
     {
+        if(this == null) return;
         this.transform.position = new Vector3(0, 0, 0);
         this.transform.eulerAngles = new Vector3(0, 0, 0);
         rb.Sleep(); //to instantly stop objects with add force

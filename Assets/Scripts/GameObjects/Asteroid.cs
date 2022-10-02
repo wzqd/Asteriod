@@ -121,7 +121,11 @@ public class Asteroid : MonoBehaviour
             GameObject explosion = PoolMgr.Instance.GetObj("GameObjects/Explosion"); //create explosion
             explosion.transform.position = this.transform.position;
             explosion.transform.localScale = this.transform.localScale;
+            
+            AudioMgr.Instance.PlayAudio("ShipExplosion", false);
         }
+        
+        
         else if (other.gameObject.CompareTag("Bullet")) //if it hits a bullet
         {
             EventMgr.Instance.EventTrigger("AsteroidDestroyed"); //trigger event
@@ -142,6 +146,7 @@ public class Asteroid : MonoBehaviour
             explosion.transform.position = this.transform.position;
             explosion.transform.localScale = this.transform.localScale;
             
+            AudioMgr.Instance.PlayAudio("AsteroidExplosion", false);
             //(code after hiding is meaningless)
             HideAsteroid();
 

@@ -9,5 +9,9 @@ public class GameMgr : MonoBehaviour
     {
         UIControl.GetInstance();
         AsteroidSpawner.GetInstance();
+        AudioMgr.Instance.ChangeAudioVolume(0.2f);
+        
+        AudioMgr.Instance.PlayBGM("SpaceGameBGM");
+        AudioMgr.Instance.ChangeBGMVolume(0.2f);
     }
 }

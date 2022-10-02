@@ -43,6 +43,8 @@ public class EndGame : BasePanel
                     
                     PoolMgr.Instance.Clear();
                     UIMgr.Instance.HidePanel("EndGame");
+                    
+                    AudioMgr.Instance.ClearAudio();
                     print("return to start menu");
                 }));
                 break;
