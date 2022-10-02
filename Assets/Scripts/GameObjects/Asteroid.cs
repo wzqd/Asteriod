@@ -117,6 +117,10 @@ public class Asteroid : MonoBehaviour
         {
             EventMgr.Instance.EventTrigger("AsteroidHitSpaceShip");
             HideAsteroid();
+            
+            GameObject explosion = PoolMgr.Instance.GetObj("GameObjects/Explosion"); //create explosion
+            explosion.transform.position = this.transform.position;
+            explosion.transform.localScale = this.transform.localScale;
         }
         else if (other.gameObject.CompareTag("Bullet")) //if it hits a bullet
         {
@@ -133,6 +137,10 @@ public class Asteroid : MonoBehaviour
                 Asteroid smallAsteroid2 = PoolMgr.Instance.GetObj("GameObjects/Asteroid").GetComponent<Asteroid>();
                 smallAsteroid2.smallAsteroidSpawn(this.transform.position);
             }
+
+            GameObject explosion = PoolMgr.Instance.GetObj("GameObjects/Explosion"); //create explosion
+            explosion.transform.position = this.transform.position;
+            explosion.transform.localScale = this.transform.localScale;
             
             //(code after hiding is meaningless)
             HideAsteroid();

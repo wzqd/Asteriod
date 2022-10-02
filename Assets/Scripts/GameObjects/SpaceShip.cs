@@ -70,6 +70,8 @@ public class SpaceShip : MonoBehaviour
             bulletObj.transform.rotation = this.transform.rotation; //adjust its rotation
             Bullet bullet = bulletObj.GetComponent<Bullet>();
             bullet.rb.velocity = direction * this.bulletSpeed; //adjust its speed
+            
+            //add audio
         }
     }
 
