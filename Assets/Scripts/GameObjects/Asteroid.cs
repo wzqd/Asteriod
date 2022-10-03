@@ -24,6 +24,7 @@ public class Asteroid : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         EventMgr.Instance.AddEventListener("RestartGame", HideAsteroid);
+        EventMgr.Instance.AddEventListener("TriggerNuke", HideAsteroid);
         
         
     }

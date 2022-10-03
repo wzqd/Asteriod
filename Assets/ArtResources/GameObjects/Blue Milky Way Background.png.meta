@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -1053,8 +1053,8 @@ TextureImporter:
     nameFileIdTable:
       Blue Milky Way Background_2: -374782103
       Blue Milky Way Background_17: -697749373
-      Blue Milky Way Background_7: 194953707
       Blue Milky Way Background_33: 1722768538
+      Blue Milky Way Background_19: 1542935502
       Blue Milky Way Background_23: -221350959
       Blue Milky Way Background_32: -272528733
       Blue Milky Way Background_0: -1786914454
@@ -1093,8 +1093,8 @@ TextureImporter:
       Blue Milky Way Background_43: -549590464
       Blue Milky Way Background_30: 1792444382
       Blue Milky Way Background_21: 138280350
-      Blue Milky Way Background_19: 1542935502
       Blue Milky Way Background_6: -533881756
+      Blue Milky Way Background_7: 194953707
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -5,34 +5,46 @@ using UnityEngine;
 public class AsteroidSpawner : SingletonMono<AsteroidSpawner>
 {
 
-    private float spawnTime = 2;
+    private float asteroidSpawnTime = 2;
+    private float nukeSpawnTime = 10;
     void Start()
     {
+        //events for asteroid spawning
         EventMgr.Instance.AddEventListener("StartGame", (() =>
         {
-            StartCoroutine("SpawnCoroutine");
+            StartCoroutine("AsteroidSpawnCoroutine");
         }));
         
         EventMgr.Instance.AddEventListener("GameOver", (() =>
         {
-            StopCoroutine("SpawnCoroutine");
+            StopCoroutine("AsteroidSpawnCoroutine");
         }));
         EventMgr.Instance.AddEventListener("RestartGame", () =>
         {
-            StartCoroutine("SpawnCoroutine");
+            StartCoroutine("AsteroidSpawnCoroutine");
+        });        
+        
+        //events for nuke spawning
+        EventMgr.Instance.AddEventListener("StartGame", (() =>
+        {
+            StartCoroutine("NukeSpawnCoroutine");
+        }));
+        
+        EventMgr.Instance.AddEventListener("GameOver", (() =>
+        {
+            StopCoroutine("NukeSpawnCoroutine");
+        }));
+        EventMgr.Instance.AddEventListener("RestartGame", () =>
+        {
+            StartCoroutine("NukeSpawnCoroutine");
         });
         
         
 
 
     }
-    
-    void Update()
-    {
-        
-    }
 
-    private IEnumerator SpawnCoroutine() //coroutine method
+    private IEnumerator AsteroidSpawnCoroutine() //coroutine method
     {
         while (true)
         {
@@ -40,7 +52,19 @@ public class AsteroidSpawner : SingletonMono<AsteroidSpawner>
     
             ast.RandomSpawn(); //spawn the asteroid
             
-            yield return new WaitForSeconds(spawnTime); //wait for few seconds to spawn next asteroid
+            yield return new WaitForSeconds(asteroidSpawnTime); //wait for few seconds to spawn next asteroid
+        }
+    }    
+    
+    private IEnumerator NukeSpawnCoroutine() //coroutine method
+    {
+        while (true)
+        {
+            Nuke nuke = PoolMgr.Instance.GetObj("GameObjects/Nuke").gameObject.GetComponent<Nuke>();
+    
+            nuke.RandomSpawn(); //spawn the asteroid
+            
+            yield return new WaitForSeconds(nukeSpawnTime); //wait for few seconds to spawn next asteroid
         }
     }
 }
