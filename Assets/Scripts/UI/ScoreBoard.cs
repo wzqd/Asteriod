@@ -14,6 +14,7 @@ public class ScoreBoard : BasePanel
     {
         scoreText =  GetUIComponent<Text>("Score");
         EventMgr.Instance.AddEventListener("AsteroidDestroyed", AsteroidDestroyed);
+        EventMgr.Instance.AddEventListener("AsteroidNukeAddPoint", AsteroidNukeAddPoint);
         EventMgr.Instance.AddEventListener("RestartGame", ResetScore);
     }
 
@@ -25,6 +26,13 @@ public class ScoreBoard : BasePanel
     private void AsteroidDestroyed()
     {
         score += 100; //hit asteroid points
+        if (scoreText == null) return;
+        scoreText.text = score.ToString(); //update score on ui
+    }   
+    
+    private void AsteroidNukeAddPoint()
+    {
+        score += 50; //nuke asteroid points
         if (scoreText == null) return;
         scoreText.text = score.ToString(); //update score on ui
     }

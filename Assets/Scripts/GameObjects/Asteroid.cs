@@ -24,7 +24,7 @@ public class Asteroid : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         EventMgr.Instance.AddEventListener("RestartGame", HideAsteroid);
-        EventMgr.Instance.AddEventListener("TriggerNuke", HideAsteroid);
+        EventMgr.Instance.AddEventListener("TriggerNuke", TriggerNuke);
         
         
     }
@@ -53,7 +53,13 @@ public class Asteroid : MonoBehaviour
         if(this == null) return;
         PoolMgr.Instance.PushObj("GameObjects/Asteroid", this.gameObject); //push it back to the pool
     }
-    
+
+
+    private void TriggerNuke()
+    {        
+        EventMgr.Instance.EventTrigger("AsteroidNukeAddPoint");
+        HideAsteroid();
+    }
     
     
     public void RandomSpawn()

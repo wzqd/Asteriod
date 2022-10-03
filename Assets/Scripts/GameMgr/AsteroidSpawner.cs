@@ -12,7 +12,10 @@ public class AsteroidSpawner : SingletonMono<AsteroidSpawner>
         //events for asteroid spawning
         EventMgr.Instance.AddEventListener("StartGame", (() =>
         {
-            StartCoroutine("AsteroidSpawnCoroutine");
+            TimeMgr.Instance.StartTimer(2, (() =>
+            {
+                StartCoroutine("AsteroidSpawnCoroutine");
+            }));
         }));
         
         EventMgr.Instance.AddEventListener("GameOver", (() =>
@@ -26,8 +29,11 @@ public class AsteroidSpawner : SingletonMono<AsteroidSpawner>
         
         //events for nuke spawning
         EventMgr.Instance.AddEventListener("StartGame", (() =>
-        {
-            StartCoroutine("NukeSpawnCoroutine");
+        {            
+            TimeMgr.Instance.StartTimer(5, (() =>
+            {
+                StartCoroutine("NukeSpawnCoroutine");
+            }));
         }));
         
         EventMgr.Instance.AddEventListener("GameOver", (() =>

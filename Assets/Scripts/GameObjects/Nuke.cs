@@ -6,11 +6,23 @@ using Random = UnityEngine.Random;
 
 public class Nuke : MonoBehaviour
 {
+    private void Awake()
+    {
+        EventMgr.Instance.AddEventListener("RestartGame", HideNuke);
+    }
+
     private void OnEnable()
     {
         RandomSpawn();
     }
 
+    private void HideNuke()
+    {
+        if(this == null) return;
+        PoolMgr.Instance.PushObj("GameObjects/Nuke", this.gameObject); //push it back to the pool
+    }
+
+    
     public void RandomSpawn()
     {
         this.transform.position = new Vector3(Random.Range(ScreenBound.Instance.LeftEdge+10, ScreenBound.Instance.RightEdge-10),
@@ -23,8 +35,8 @@ public class Nuke : MonoBehaviour
         {
             EventMgr.Instance.EventTrigger("TriggerNuke");
             AudioMgr.Instance.PlayAudio("ShipExplosion", false);
-            
-            PoolMgr.Instance.PushObj("GameObjects/Nuke", this.gameObject);
+
+            HideNuke();
         }
     }
 }
